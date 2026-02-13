@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="StudyPro - Сервис для мгновенной генерации дипломов и сертификатов с использованием ИИ.">
+    <title>StudyPro | Генерация Дипломов</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Fallback for icon if needed, using emojis for now or heroicons via CDN */
+    </style>
+</head>
+
+<body>
+    <div class="background-glow"></div>
+
+    <header>
+        <nav class="navbar glass">
+            <div class="logo">StudyPro<span class="dot">.</span></div>
+            <ul class="nav-links">
+                <li><a href="#features">Преимущества</a></li>
+                <li><a href="#how-it-works">Как это работает</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+            <a href="#generate" class="btn-primary small">Начать</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="gradient-text">Создай свой успех <br> за секунды</h1>
+                <p class="subtitle">Интеллектуальный генератор дипломов и сертификатов профессионального уровня.</p>
+                <div class="hero-actions">
+                    <button class="btn-primary" id="generate-btn">Сгенерировать Диплом</button>
+                    <button class="btn-secondary">Узнать больше</button>
+                </div>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="count">10k+</span>
+                        <span class="label">Документов</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="count">99%</span>
+                        <span class="label">Одобрено</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- CSS based visual representation since image generation failed -->
+                <div class="diploma-card glass float-animation">
+                    <div class="diploma-header">
+                        <div class="diploma-logo"></div>
+                        <div class="diploma-lines"></div>
+                    </div>
+                    <div class="diploma-body">
+                        <div class="diploma-text-block"></div>
+                        <div class="diploma-text-block short"></div>
+                        <div class="diploma-seal pulse-animation"></div>
+                    </div>
+                </div>
+                <div class="glowing-orb"></div>
+            </div>
+        </section>
+
+        <section id="features" class="features">
+            <h2>Почему StudyPro?</h2>
+            <div class="feature-grid">
+                <div class="feature-card glass">
+                    <div class="icon">🚀</div>
+                    <h3>Мгновенно</h3>
+                    <p>Получите готовый документ за считанные секунды благодаря мощным алгоритмам.</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="icon">🔒</div>
+                    <h3>Конфиденциально</h3>
+                    <p>Ваши данные надежно защищены и не передаются третьим лицам.</p>
+                </div>
+                <div class="feature-card glass">
+                    <div class="icon">✨</div>
+                    <h3>Премиум Дизайн</h3>
+                    <p>Профессиональные шаблоны, которые выглядят официально и стильно.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" class="steps">
+            <h2>Как это работает</h2>
+            <div class="steps-container">
+                <div class="step-item">
+                    <div class="step-number">01</div>
+                    <h3>Введите данные</h3>
+                    <p>Заполните простую форму с необходимой информацией.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">02</div>
+                    <h3>ИИ Генерация</h3>
+                    <p>Наша система автоматически создаст структуру и текст.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">03</div>
+                    <h3>Скачайте</h3>
+                    <p>Получите готовый документ в формате DOCX или PDF.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="generate" class="cta-section glass">
+            <h2>Создать Диплом</h2>
+            <p>Заполните данные ниже, чтобы мгновенно получить готовый документ.</p>
+            <form class="generate-form" id="diploma-form">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="student_name">ФИО Студента</label>
+                        <input type="text" id="student_name" name="student_name" placeholder="Иванов Иван Иванович"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="theme">Тема работы</label>
+                        <input type="text" id="theme" name="theme" placeholder="Разработка системы..." required>
+                    </div>
+                    <div class="form-group">
+                        <label for="university">Университет</label>
+                        <input type="text" id="university" name="university" placeholder="МГТУ им. Баумана" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="faculty">Факультет</label>
+                        <input type="text" id="faculty" name="faculty" placeholder="Информационные технологии" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="department">Кафедра</label>
+                        <input type="text" id="department" name="department" placeholder="Программная инженерия"
+                            required>
+                    </div>
+                    <div class="form-group">
+                        <label for="group">Группа</label>
+                        <input type="text" id="group" name="group" placeholder="ИУ7-88Б" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="city">Город</label>
+                        <input type="text" id="city" name="city" placeholder="Москва" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="year">Год</label>
+                        <input type="text" id="year" name="year" placeholder="2024" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="supervisor_name">ФИО Руководителя</label>
+                        <input type="text" id="supervisor_name" name="supervisor_name"
+                            placeholder="Петров Петр Петрович" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="supervisor_degree">Степень руководителя</label>
+                        <input type="text" id="supervisor_degree" name="supervisor_degree" placeholder="к.т.н., доцент"
+                            required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary" id="submit-btn"
+                    style="margin-top: 2rem; width: 100%;">Сгенерировать и Скачать</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">StudyPro</div>
+            <p>&copy; 2024 StudyPro. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
